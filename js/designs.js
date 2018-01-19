@@ -6,10 +6,9 @@ const widthInput = document.getElementById('input_width');
 
 // Select color input
 let colorSelected = colorPicker.value
-
-// Select size input
 let heightChosen = heightInput.value;
 let widthChosen = widthInput.value;
+
 
 // When size is submitted by the user, call makeGrid()
 
@@ -19,7 +18,7 @@ function makeGrid() {
     let row = document.createElement("tr");
     for (let j = 0; j < widthChosen; j++) {
       // Create a <td> element and put the <td> at
-      // the end of the table row
+      // the endgi of the table row
       let cell = document.createElement("td");
       row.appendChild(cell);
     }
@@ -27,3 +26,10 @@ function makeGrid() {
     pixelCanvas.appendChild(row);
   }
 }
+
+submitButton.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  heightChosen = heightInput.value;
+  widthChosen = widthInput.value;
+  makeGrid();
+});
