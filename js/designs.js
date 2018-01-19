@@ -33,3 +33,12 @@ submitButton.addEventListener('click', function(evt) {
   widthChosen = widthInput.value;
   makeGrid();
 });
+
+function changeBackground(evt) {
+  colorSelected = colorPicker.value;
+  evt.target.style.backgroundColor=colorSelected;
+}
+
+let cells = pixelCanvas.getElementsByTagName("td");
+
+pixelCanvas.addEventListener('click', changeBackground);
