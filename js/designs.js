@@ -33,18 +33,3 @@ submitButton.addEventListener('click', function(evt) {
   widthChosen = widthInput.value;
   makeGrid();
 });
-
-colorPicker.addEventListener('input', function() {
-  changeBorderColor();
-});
-
-
-function changeBorderColor() {
-  let td = pixelCanvas.getElementsByTagName("td");
-  for (i = 0; i < td.length; i++) {
-    colorSelected = colorPicker.value;
-    td[i].style.borderColor = colorSelected;
-    td[i].style.borderWidth = "1px";
-    td[i].style.borderStyle = "solid";
-  }
-}
